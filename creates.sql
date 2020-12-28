@@ -1,93 +1,94 @@
-CREATE TABLE Biblioteca (
-    BibliotecaId NUMBER NOT NULL,
+CREATE TABLE Librarie (
+    Librarie_Id NUMBER NOT NULL,
     Denumire VARCHAR2(50) NOT NULL,
     Adresa VARCHAR2(100) NOT NULL,
-    PRIMARY KEY (BibliotecaId)
+    PRIMARY KEY (Librarie_Id)
 );
 
 CREATE TABLE Carte (
-    CarteId NUMBER NOT NULL,
+    Carte_Id NUMBER NOT NULL,
     Denumire VARCHAR2(60) NOT NULL,
+    Autor VARCHAR(50) NOT NULL,
     Pret NUMBER NOT NULL,
     Categorie VARCHAR2(50) NOT NULL,
-    PRIMARY KEY (CarteId)
+    PRIMARY KEY (Carte_Id)
 );
 
 CREATE TABLE Abonament(
-    AbonamentId NUMBER NOT NULL,
-    PlataLunara NUMBER NOT NULL,
-    PRIMARY KEY (AbonamentId)
+    Abonament_Id NUMBER NOT NULL,
+    Plata_Lunara NUMBER NOT NULL,
+    PRIMARY KEY (Abonament_Id)
 );
 
 CREATE TABLE Membru (
-    MembruId NUMBER NOT NULL,
+    Membru_Id NUMBER NOT NULL,
     Nume VARCHAR2(50) NOT NULL,
     Prenume VARCHAR2(50) NOT NULL,
-    DataInscrierii DATE NOT NULL,
-    AbonamentId NUMBER NOT NULL,
-    PRIMARY KEY (MembruId),
+    Data_Inscrierii DATE NOT NULL,
+    Abonament_Id NUMBER,
+    PRIMARY KEY (Membru_Id),
     CONSTRAINT fk_abon
-    FOREIGN KEY (AbonamentId)
-    REFERENCES Abonament(AbonamentId)
+    FOREIGN KEY (Abonament_Id)
+    REFERENCES Abonament(Abonament_Id)
 );
 
-CREATE TABLE CarteInclusa(
-    AbonamentId NUMBER NOT NULL,
-    CarteId NUMBER NOT NULL,
-    PRIMARY KEY (AbonamentId, CarteId),
+CREATE TABLE Carte_Inclusa(
+    Abonament_Id NUMBER NOT NULL,
+    Carte_Id NUMBER NOT NULL,
+    PRIMARY KEY (Abonament_Id, Carte_Id),
     CONSTRAINT fk_col_ab
-    FOREIGN KEY (AbonamentId)
-    REFERENCES Abonament(AbonamentId),
+    FOREIGN KEY (Abonament_Id)
+    REFERENCES Abonament(Abonament_Id),
     CONSTRAINT fk_col_car
-    FOREIGN KEY (CarteId)
-    REFERENCES Carte(CarteId)
+    FOREIGN KEY (Carte_Id)
+    REFERENCES Carte(Carte_Id)
 );
 
-CREATE TABLE SeAflaIn (
-    BibliotecaId NUMBER NOT NULL,
-    CarteId NUMBER NOT NULL,
-    PRIMARY KEY (BibliotecaId, CarteId),
+CREATE TABLE Se_Afla_In (
+    Librarie_Id NUMBER NOT NULL,
+    Carte_Id NUMBER NOT NULL,
+    PRIMARY KEY (Librarie_Id, Carte_Id),
     CONSTRAINT fk_asoc_sb
-    FOREIGN KEY (BibliotecaId)
-    REFERENCES Biblioteca(BibliotecaId),
+    FOREIGN KEY (Librarie_Id)
+    REFERENCES Librarie(Librarie_Id),
     CONSTRAINT fk_asoc_sc
-    FOREIGN KEY (CarteId)
-    REFERENCES Carte(CarteId)
+    FOREIGN KEY (Carte_Id)
+    REFERENCES Carte(Carte_Id)
 );
 
 
 CREATE TABLE Job (
-    JobId NUMBER NOT NULL,
+    Job_Id NUMBER NOT NULL,
     Denumire VARCHAR2(50) NOT NULL,
-    PRIMARY KEY (JobId)
+    PRIMARY KEY (Job_Id)
 );
 
 CREATE TABLE Angajat (
-	 AngajatId NUMBER NOT NULL,
-	 ManagerId NUMBER DEFAULT NULL,
-	 JobId NUMBER NOT NULL,
+	 Angajat_Id NUMBER NOT NULL,
+	 Manager_Id NUMBER DEFAULT NULL,
+	 Job_Id NUMBER NOT NULL,
 	 Salariu NUMBER NOT NULL,
 	 Nume VARCHAR2(50) NOT NULL,
 	 Prenume VARCHAR2(50) NOT NULL,
-	 DataNasterii DATE DEFAULT NULL,
-	 DataAnagajarii DATE NOT NULL,
-	 PRIMARY KEY (AngajatId),
+	 Data_Nasterii DATE DEFAULT NULL,
+	 Data_Angajarii DATE NOT NULL,
+	 PRIMARY KEY (Angajat_Id),
 	 CONSTRAINT fk_col
-	 FOREIGN KEY (JobId)
-	 REFERENCES Job(JobId),
+	 FOREIGN KEY (Job_Id)
+	 REFERENCES Job(Job_Id),
 	 CONSTRAINT fk_man
-	 FOREIGN KEY (ManagerId)
-	 REFERENCES Angajat(AngajatId)
+	 FOREIGN KEY (Manager_Id)
+	 REFERENCES Angajat(Angajat_Id)
 );
 
-CREATE TABLE LucreazaIn (
-    BibliotecaId NUMBER NOT NULL,
-    AngajatId NUMBER NOT NULL,
-    PRIMARY KEY(BibliotecaId, AngajatId),
+CREATE TABLE Lucreaza_In (
+    Librarie_Id NUMBER NOT NULL,
+    Angajat_Id NUMBER NOT NULL,
+    PRIMARY KEY(Librarie_Id, Angajat_Id),
     CONSTRAINT fk_asoc_b
-    FOREIGN KEY (BibliotecaId)
-    REFERENCES Biblioteca(BibliotecaId),
+    FOREIGN KEY (Librarie_Id)
+    REFERENCES Librarie(Librarie_Id),
     CONSTRAINT fk_asoc_a
-    FOREIGN KEY (AngajatId)
-    REFERENCES Angajat(AngajatId)
+    FOREIGN KEY (Angajat_Id)
+    REFERENCES Angajat(Angajat_Id)
 );
