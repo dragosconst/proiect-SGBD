@@ -110,43 +110,43 @@ INSERT INTO Abonament
 VALUES (3, 25);
 
 INSERT INTO Membru
-VALUES (1, 'Andrei', 'Andrei', TO_DATE(1999-04-04, 'YYYY-MM-DD'), 1);
+VALUES (1, 'Andrei', 'Andrei', TO_DATE('1999-04-04', 'YYYY-MM-DD'), 1);
 INSERT INTO Membru
-VALUES (2, 'Popescu', 'Marina', TO_DATE(2001-03-22, 'YYYY-MM-DD'), 1);
+VALUES (2, 'Popescu', 'Marina', TO_DATE('2001-03-22', 'YYYY-MM-DD'), 1);
 INSERT INTO Membru
-VALUES (3, 'Ionila', 'Ioana', TO_DATE(2002-10-10, 'YYYY-MM-DD'), NULL);
+VALUES (3, 'Ionila', 'Ioana', TO_DATE('2002-10-10', 'YYYY-MM-DD'), NULL);
 INSERT INTO Membru
-VALUES (4, 'Paun', 'Silviu', TO_DATE(2000-10-01, 'YYYY-MM-DD'), 2);
+VALUES (4, 'Paun', 'Silviu', TO_DATE('2000-10-01', 'YYYY-MM-DD'), 2);
 INSERT INTO Membru
-VALUES (5, 'Stefanescu', 'Stefan', TO_DATE(2003-05-10, 'YYYY-MM-DD'), 3);
+VALUES (5, 'Stefanescu', 'Stefan', TO_DATE('2003-05-10', 'YYYY-MM-DD'), 3);
 INSERT INTO Membru
-VALUES (6, 'Stancu', 'Loredana', TO_DATE(2001-11-02, 'YYYY-MM-DD'), 2);
+VALUES (6, 'Stancu', 'Loredana', TO_DATE('2001-11-02', 'YYYY-MM-DD'), 2);
 
 INSERT INTO Carte_Inclusa
-VALUES (1,1):
+VALUES (1,1);
 INSERT INTO Carte_Inclusa
-VALUES (1,2):
+VALUES (1,2);
 INSERT INTO Carte_Inclusa
-VALUES (1,3):
+VALUES (1,3);
 INSERT INTO Carte_Inclusa
-VALUES (2,1):
+VALUES (2,1);
 INSERT INTO Carte_Inclusa
-VALUES (2,2):
+VALUES (2,2);
 INSERT INTO Carte_Inclusa
-VALUES (2,3):
+VALUES (2,3);
 INSERT INTO Carte_Inclusa
-VALUES (2,4):
+VALUES (2,4);
 INSERT INTO Carte_Inclusa
-VALUES (2,7):
+VALUES (2,7);
 INSERT INTO Carte_Inclusa
-VALUES (3,1):
+VALUES (3,1);
 INSERT INTO Carte_Inclusa
-VALUES (3,2):
+VALUES (3,2);
 INSERT INTO Carte_Inclusa
-VALUES (3,3):
+VALUES (3,3);
 INSERT INTO Carte_Inclusa
-VALUES (3,4):
+VALUES (3,4);
 INSERT INTO Carte_Inclusa
-VALUES (3,5):
+VALUES (3,5);
 INSERT INTO Carte_Inclusa
-VALUES (3,7):
+VALUES (3,7);
