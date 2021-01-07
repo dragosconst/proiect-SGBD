@@ -1,8 +1,7 @@
 -- Un subprogram care determina in care librarii se gaseste cartea introdusa de la tastatura si ce abonamente o includ.
-DECLARE
+CREATE OR REPLACE PROCEDURE ex6 (v_nume_carte carte.denumire%TYPE )IS
     TYPE string_tabel IS TABLE OF VARCHAR2(60) INDEX BY PLS_INTEGER;
     TYPE number_tabel IS TABLE OF NUMBER INDEX BY PLS_INTEGER;
-    v_nume_carte carte.denumire%TYPE := '&p_carte';
     v_id_carte carte.carte_id%TYPE := NULL;
     v_librarii string_tabel;
     v_abonamente string_tabel;
@@ -42,5 +41,10 @@ BEGIN
     EXCEPTION 
         WHEN NO_DATA_FOUND THEN
             DBMS_OUTPUT.PUT_LINE('Cartea nu exista.');
+END;
+/
+
+BEGIN
+    ex6('Ion');
 END;
 /
