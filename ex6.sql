@@ -18,8 +18,8 @@ BEGIN
     DBMS_OUTPUT.put(v_nume_carte || ' se gaseste in librariile: ');
     FOR i IN 1..v_librarii.last LOOP
         DBMS_OUTPUT.put(v_librarii(i) || ' ');
-        END LOOP;
-        DBMS_OUTPUT.NEW_LINE();
+    END LOOP;
+    DBMS_OUTPUT.NEW_LINE();
         
     SELECT a.abonament_id BULK COLLECT INTO v_abonamente
     FROM abonament a, carte_inclusa ci
