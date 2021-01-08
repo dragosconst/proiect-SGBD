@@ -43,7 +43,6 @@ BEGIN
                     FROM carte_inclusa ci
                     WHERE ci.abonament_id = trig_help.abonamente_c(i).abonament_id AND ci.carte_id = trig_help.carte_c(j).carte_id;
                     
-                    DBMS_OUTPUT.PUT_LINE('buffer e ' || buffr);
                     IF buffr > 0 THEN
                         v_pret_total := v_pret_total + trig_help.carte_c(j).pret; -- deoarece valorile sunt luate cu un trigger before, e ca si cum am apela :OLD pt valoarea schimbata
                     END IF;
@@ -64,7 +63,6 @@ BEGIN
                 FROM carte_inclusa ci
                 WHERE ci.abonament_id = trig_help.abonamente_c(i).abonament_id AND ci.carte_id = trig_help.carte_c(j).carte_id;
                 
-                DBMS_OUTPUT.PUT_LINE('buffer e ' || buffr);
                 IF buffr > 0 THEN
                     v_pret_total := v_pret_total + trig_help.carte_c(j).pret; -- deoarece valorile sunt luate cu un trigger before, e ca si cum am apela :OLD pt valoarea schimbata
                 END IF;
