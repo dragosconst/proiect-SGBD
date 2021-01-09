@@ -25,14 +25,14 @@
 \setlength{\headheight}{18pt}
 \fancyfoot[C]{\thepage}
 \title{Bază de date pentru gestionarea unei afaceri cu librării}
-\author{Dragoș-Constantin Țânțaru}
+\author{Dragoș-Constantin Țânțaru, grupa 244}
 
 \begin{document}
 \maketitle
 \thispagestyle{fancy} 
-\section{Cerința 1. Descrierea proiectului}
-Am construit o bază de date care are ca scop facilitarea conducerii unei afaceri de tip librărie. Este posibil ca afacerea să aiba mai multe librării în posesia sa. De asemenea, am considerat că un angajat poate lucra la mai mult de o singura librărie, ca exemplu ar fi un manager ce se ocupă de mai multe librării sau un IT-ist care administrează sistemele informatice de la diferite librării.\\
-Am implementat si funcționalitatea bazei de date de a admite „membrii” ai afacerii. Un membru este un client ce a achiziționat un tip de abonament. Abonamentele reprezinta o plata lunară făcută de client, in schimbul căreia are acces la o mulțime de cărți în format digital.\\
+\section{Descrierea proiectului}
+Am construit o bază de date care are ca scop facilitarea conducerii unei afaceri de tip librărie. Este posibil ca afacerea să aibă mai multe librării în posesia sa. De asemenea, am considerat că un angajat poate lucra la mai mult de o singură librărie, ca exemplu ar fi un manager ce se ocupă de mai multe librării sau un IT-ist care administrează sistemele informatice de la diferite librării.\\
+Am implementat și funcționalitatea bazei de date de a admite „membrii” ai afacerii. Un membru este un client ce a achiziționat un tip de abonament. Abonamentele reprezinta o plată lunară făcută de client, în schimbul căreia are acces la o mulțime de cărți în format digital.\\
 Baza de date asigură toate aceste utilități și multe altele. Fără o bază de date, ar fi dificil pentru o afacere să poată menține o evidență corectă, nemaivorbind de diversele aplicații care se pot implementa facil cu o bază de date, dar care ar fi greu de realizat altfel.
 \section{Diagrama Entitate-Relație}
 \begin{figure}[!htb]
@@ -40,7 +40,7 @@ Baza de date asigură toate aceste utilități și multe altele. Fără o bază 
 	\caption{diagrama ER}
 	\label{fig:ER}
 \end{figure}
-\section{Diagrama Conceptuala}
+\section{Diagrama Conceptuală}
 \begin{figure}[!htb]
 	\includegraphics[max width=\linewidth]{imgs/diagConceptuala.png}
 	\caption{diagrama Conceptuala}
@@ -158,7 +158,7 @@ REFERENCES Angajati(Angajat_Id)
 \caption{creates 2}
 \label{fig:creates 2}
 \end{figure}
-\section{Inserări in tabel}
+\section{Inserări în tabel}
 \begin{lstlisting}[language=SQL,
 	showspaces=false,
 	basicstyle=\ttfamily,
@@ -411,17 +411,17 @@ END;
 \end{lstlisting}
 \begin{figure}[!htb]
 	\includegraphics[max width=\linewidth]{imgs/ex6_1.png}
-	\caption{Carte care nu exista in vreun abonament}
+	\caption{Carte care nu există în vreun abonament}
 	\label{fig:ex6_1}
 \end{figure}
 \begin{figure}[!htb]
 \includegraphics[max width=\linewidth]{imgs/ex6_2.png}
-\caption{Carte inclusa in abonamente}
+\caption{Carte inclusă în abonamente}
 \label{fig:ex6_2}
 \end{figure}
 \begin{figure}[!htb]
 \includegraphics[max width=\linewidth]{imgs/ex6_3.png}
-\caption{Carte inexistenta}
+\caption{Carte inexistentă}
 \label{fig:ex6_3}
 \end{figure}
 \section{Subprogram cu un tip de cursor studiat}
@@ -456,7 +456,7 @@ END;
 \end{lstlisting}
 \begin{figure}[!htb]
 	\includegraphics[max width=\linewidth]{imgs/ex7.png}
-	\caption{Exemplu de executie + tabel schimbat}
+	\caption{Exemplu de execuție + tabel schimbat}
 	\label{fig:ex7}
 \end{figure}
 \section{Subprogram de tip funcție care lucrează cu minim 3 tabele}
@@ -525,7 +525,7 @@ END;
 \end{lstlisting}
 \begin{figure}[!htb]
 \includegraphics[max width=\linewidth]{imgs/ex8_1.png}
-\caption{Fara exceptii}
+\caption{Fără excepții}
 \label{fig:ex8_1}
 \end{figure}
 \begin{figure}[!htb]

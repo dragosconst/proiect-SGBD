@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.8)  9 JAN 2021 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.8)  9 JAN 2021 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,7 +581,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--470
  []
 
 
-Overfull \vbox (19.49168pt too high) has occurred while \output is active []
+Overfull \vbox (19.92656pt too high) has occurred while \output is active []
 
 
 [19 <./imgs/ex7.png>] [20]
@@ -689,7 +689,7 @@ Package pdftex.def Info: imgs/ex13_4.png  used on input line 946.
 Here is how much of TeX's memory you used:
  8750 strings out of 479310
  126699 string characters out of 5871341
- 891002 words of memory out of 5000000
+ 891004 words of memory out of 5000000
  25756 multiletter control sequences out of 15000+600000
  416111 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -704,7 +704,7 @@ texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/20
 ist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2020/texmf-dist/fonts/
 type1/public/cm-super/sfrm2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publ
 ic/cm-super/sftt1200.pfb>
-Output written on document.pdf (42 pages, 1028450 bytes).
+Output written on document.pdf (42 pages, 1028687 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams
