@@ -1,6 +1,6 @@
 --Nu e permis sa fie schimbati membrii in timpul weekend-ului sau in afara orelor de program.
 CREATE OR REPLACE TRIGGER T10 
-BEFORE INSERT OR DELETE OR UPDATE ON Membru 
+BEFORE INSERT OR DELETE OR UPDATE ON Membri
 BEGIN
     IF (TO_CHAR(SYSDATE, 'D') = 1 OR TO_CHAR(SYSDATE, 'D') = 7)
         OR TO_CHAR(SYSDATE, 'HH24') NOT BETWEEN 8 AND 21 THEN

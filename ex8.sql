@@ -5,7 +5,7 @@ CREATE OR REPLACE TYPE int_table IS VARRAY(3) OF NUMBER;
 CREATE OR REPLACE FUNCTION f8 (job_name jobs.denumire%TYPE)
                     RETURN int_table
 IS
-    v_job_id angajat.job_id%TYPE;
+    v_job_id angajati.job_id%TYPE;
     v_check NUMBER;
     v_old_lib_val NUMBER := -1;
     v_counter NUMBER := 1;
@@ -17,14 +17,14 @@ BEGIN
     WHERE denumire = job_name;
     
     SELECT COUNT(*) INTO v_check -- verific daca exista angajati cu job-ul dat
-    FROM angajat a
+    FROM angajati a
     WHERE a.job_id = v_job_id;
     IF v_check = 0 THEN
         RAISE_APPLICATION_ERROR(-20000, 'Nu exista angajati cu job-ul dat.');
     END IF;
         
     FOR i IN (SELECT l.librarie_id, a.job_id, COUNT(*) c
-            FROM angajat a, lucreaza_in li, librarie l
+            FROM angajati a, lucreaza_in li, librarii l
             WHERE a.angajat_id = li.angajat_id AND li.librarie_id = l.librarie_id
             GROUP BY l.librarie_id, a.job_id
             ORDER BY l.librarie_id) LOOP
